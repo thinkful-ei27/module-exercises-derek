@@ -12,9 +12,11 @@ const store = (function() {
   ];
   const hideCheckedItems = false;
   const searchTerm =  '';
-  function findById(name) {
-    store.items.find(item => item.name === name);
+
+  function findById(id) {
+    return store.items.find(item => item.id === id);
   }
+
   function addItem(name) {
     try {
       Item.validateName(name);
